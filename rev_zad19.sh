@@ -11,7 +11,6 @@ do
     if [ -d "$FILE" ]
     then
         mv "$FILE" "${FILE^^}"
-        ./rev_zad19.sh "$WORKDIR"/"${FILE^^}"
+        ./rev_zad19.sh "${FILE^^}"
     fi
 done
-     
