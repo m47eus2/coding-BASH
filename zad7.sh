@@ -7,13 +7,13 @@ then
 	mkdir ./backup
 fi
 
-for file in $*
+for file in "$*"
 do
-	if [ -e $file ]
+	if [ -e "$file" ]
 	then
-		if ! [ -e ./backup/${file}_${DATE} ]
+		if ! [ -e "./backup/${file}_${DATE}" ]
 		then
-			cp $file ./backup/${file}_${DATE}
+			cp "$file" "./backup/${file}_${DATE}"
 		else
 			echo "File ${file}_${DATE} already exists"
 			break

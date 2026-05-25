@@ -2,13 +2,11 @@
 
 for file in *
 do
-	if [ -f $file ]
+	if [ -f "$file" ]
 	then
-		echo ${file}" -> file"
-	fi
-
-	if [ -d $file ]
+		echo "$file -> file"
+	elif [ -d $file ]
 	then
-		echo ${file}" -> dir"
+		echo "$file -> dir"
 	fi
 done
